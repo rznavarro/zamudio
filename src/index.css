@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --brand-orange: #F39C12;
+  --brand-orange-hover: #F5B043;
+  --brand-orange-dark: #C87F0A;
+  --brand-navy: #013C68;
+  --brand-navy-dark: #002542;
+  --brand-gold: #FCC73E;
+}
+
+body {
+  font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
+}
+
+.font-heading {
+  font-family: 'Oswald', system-ui, -apple-system, sans-serif;
+}
+
+.font-body {
+  font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
+}
+
+.font-accent {
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+}
+
+/* Subtle geometric key watermark pattern */
+.bg-key-watermark {
+  background-color: #013C68;
+  background-image: radial-gradient(#F39C12 0.75px, transparent 0.75px), radial-gradient(#FCC73E 0.75px, #013C68 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+/* Pulse animation for the mobile call button */
+@keyframes softPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(243, 156, 18, 0);
+  }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 2.5s infinite ease-in-out;
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-soft-pulse {
+    animation: none !important;
+  }
+}

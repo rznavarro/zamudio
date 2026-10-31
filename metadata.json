@@ -1,0 +1,6 @@
+{
+  "name": "Cerrajerías Zamudio – Landing Page",
+  "description": "Landing page de alta conversión para Cerrajerías Zamudio en Guadalajara: llaves con chip, controles, cerraduras y distribución para cerrajeros.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
